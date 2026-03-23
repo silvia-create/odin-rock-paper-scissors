@@ -11,27 +11,27 @@
 //If randomNumber >= 0.3 && randomNumber < 0.6, assign 'paper' to computerChoice
 //Else if, assign 'scissors' to computerChoice
 //return computerChoice
-// function getComputerChoice(){
-//     let computerChoice = 0;
-//     let randomNumber = Math.random();
-//     if(randomNumber >= 0 && randomNumber < 0.3){
-//         computerChoice = 'rock';
-//     } else if(randomNumber >= 0.3 && randomNumber < 0.6){
-//         computerChoice = 'paper';
-//     } else {
-//         computerChoice = 'scissors';
-//     }
-//     return computerChoice;
-// }
+function getComputerChoice(){
+    let computerChoice = 0;
+    let randomNumber = Math.random();
+    if(randomNumber >= 0 && randomNumber < 0.3){
+        computerChoice = 'rock';
+    } else if(randomNumber >= 0.3 && randomNumber < 0.6){
+        computerChoice = 'paper';
+    } else {
+        computerChoice = 'scissors';
+    }
+    return computerChoice;
+}
 
 //Declare a function named getHumanChoice
 //Declare a variable named humanChoice
 //Use prompt() to get the user's input, assign it to humanChoice
 //return humanChoice
-// function getHumanChoice(){
-//     let humanChoice = prompt("What's your choice?");
-//     return humanChoice;
-// }
+function getHumanChoice(){
+    let humanChoice = prompt("What's your choice?");
+    return humanChoice;
+}
 
 //Initialize humanScore and computerScore in the global scope with value of 0.
 
@@ -49,13 +49,6 @@
     //If (computerChoice === 'scissors'), log("Tied.")
     //If (computerChoice === 'rock'), computerScore= computerScore+1, log("You lose! Rock beats Scissors.")
     //If (computerChoice === 'paper'), humanScore= humanScore+1, log("You win! Scissors beat Paper.")
-
-
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-// console.log(humanSelection);
-// console.log(computerSelection);
-// console.log("Scores -> Human: " + humanScore + " | Computer: " + computerScore)
 
 //Create a function named playGame
 //Move playRound function and score variables inside(?)
@@ -98,22 +91,7 @@ function playGame(){
             }
         }
     }
-    function getHumanChoice(){
-        let humanChoice = prompt("What's your choice?");
-        return humanChoice;
-    }  
-    function getComputerChoice(){
-        let computerChoice = 0;
-        let randomNumber = Math.random();
-        if(randomNumber >= 0 && randomNumber < 0.3){
-            computerChoice = 'rock';
-        } else if(randomNumber >= 0.3 && randomNumber < 0.6){
-            computerChoice = 'paper';
-        } else {
-            computerChoice = 'scissors';
-        }
-        return computerChoice;
-    } 
+
     let humanSelection1 = getHumanChoice();
     let computerSelection1 = getComputerChoice();
     console.log(humanSelection1);
