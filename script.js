@@ -126,5 +126,13 @@ function playGame(){
     // console.log(computerSelection5);
     playRound(humanSelection5,computerSelection5);
     // console.log("Score after Round 5: Human " + humanScore + " - Computer " + computerScore);
+    
+    if (humanScore > computerScore){
+        alert("You're the winner!");
+    } else if(humanScore < computerScore){
+        alert("Computer wins the game.")
+    } else{
+        alert("It's a tie.")
+    }
 }
 playGame();
