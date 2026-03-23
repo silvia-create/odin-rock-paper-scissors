@@ -4,13 +4,20 @@
 // Each round we keep track of the scores and declare the winner.
 
 //pseudocode:
-//Declare a function named 'getComputerChoice' that randomly returns "rock","paper",or "scissors"
-//Declare a variable named computerChoice
-//Declare a variable named randomNumber and get the value from Math.random()
-//If randomNumber >= 0 && randomNumber < 0.3, assign 'rock' to computerChoice
-//If randomNumber >= 0.3 && randomNumber < 0.6, assign 'paper' to computerChoice
-//Else if, assign 'scissors' to computerChoice
-//return computerChoice
+// FUNCTION getComputerChoice
+//     DECLARE randomNumber = RANDOM value between 0 and 1
+//     DECLARE computerChoice
+
+//     IF randomNumber < 0.3 THEN 
+//         SET computerChoice TO "rock"
+//     ELSE IF randomNumber < 0.6 THEN
+//         SET computerChoice TO "paper"
+//     ELSE 
+//         SET computerChoice TO "scissors"
+//     END IF
+
+//     RETURN computerChoice
+// ENDFUNCTION
 function getComputerChoice(){
     let computerChoice = 0;
     let randomNumber = Math.random();
@@ -24,35 +31,53 @@ function getComputerChoice(){
     return computerChoice;
 }
 
-//Declare a function named getHumanChoice
-//Declare a variable named humanChoice
-//Use prompt() to get the user's input, assign it to humanChoice
-//return humanChoice
+// FUNCTION getHumanChoice
+//     DECLARE humanChoice
+//     INPUT "What's your choice?" TO humanChoice
+//     RETURN humanChoice
+// ENDFUNCTION
 function getHumanChoice(){
     let humanChoice = prompt("What's your choice?");
     return humanChoice;
 }
 
-//Initialize humanScore and computerScore in the global scope with value of 0.
+// FUNCTION playGame
+//     //Initialize scores
+//     SET humanScore TO 0
+//     SET computerScore TO 0
 
-//Create a function named playRound and take humanChoice and computerChoice as parameters
-//Use toLowerCase() to humanChoice to have the case-insensitive value
-//If (humanChoice === 'rock')
-    //If (computerChoice === 'rock'), log("Tied.")
-    //If (computerChoice === 'paper'), computerScore= computerScore+1, log("You lose! Paper beats Rock.")
-    //If (computerChoice === 'scissors'), humanScore= humanScore+1, log("You win! Rock beats Scissors.")
-//If (humanChoice === 'paper')
-    //If (computerChoice === 'paper'), log("Tied.")
-    //If (computerChoice === 'rock'), humanScore= humanScore+1, log("You win! Paper beats Rock.")
-    //If (computerChoice === 'scissors'), computerScore= computerScore+1, log("You lose! Scissors beat Paper.")
-//If (humanChoice === 'scissors')
-    //If (computerChoice === 'scissors'), log("Tied.")
-    //If (computerChoice === 'rock'), computerScore= computerScore+1, log("You lose! Rock beats Scissors.")
-    //If (computerChoice === 'paper'), humanScore= humanScore+1, log("You win! Scissors beat Paper.")
+//     //Define the nested logic for a single round
+//     FUNCTION playRound(humanChoice, computerChoice)
+//         SET humanChoice TO lowercase version of humanChoice
+        
+//         IF humanChoice EQUALS computerChoice THEN
+//             DISPLAY "Tied."
+//         ELSE IF (humanChoice is "rock" AND computerChoice is "paper") OR (humanChoice is "paper" AND computerChoice is "scissors") OR (humanChoice is "scissors" AND computerChoice is "rock") THEN
+//             SET computerScore TO computerScore+1
+//             DISPLAY "You lose!"
+//         ELSE
+//             SET humanScore TO humanScore+1
+//             DISPLAY "You win!"
+//         END IF
+//     ENDFUNCTION
 
-//Create a function named playGame
-//Move playRound function and score variables inside(?)
-//call playRound 5 times
+//     //Use a LOOP construct to repeat the game 5 times
+//     FOR round FROM 1 TO 5
+//         DECLARE humanSelection = CALL getHumanChoice
+//         DECLARE computerSelection = CALL getComputerChoice
+//         CALL playRound(humanSelection,computerSelection)
+//     END FOR
+
+//     //Final result logic 
+//     If humanScore > computerScore THEN
+//         DISPLAY "You're the winner!"
+//     ELSE if humanScore < computerScore THEN
+//         DISPLAY "Computer wins the game."
+//     ELSE 
+//         DISPLAY "It's a tie."
+//     ENDIF
+// ENDFUNCTION
+
 function playGame(){
     let humanScore = 0;
     let computerScore  = 0;
