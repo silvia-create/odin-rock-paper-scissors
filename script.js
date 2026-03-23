@@ -94,16 +94,37 @@ function playGame(){
 
     let humanSelection1 = getHumanChoice();
     let computerSelection1 = getComputerChoice();
-    console.log(humanSelection1);
-    console.log(computerSelection1); 
+    // console.log(humanSelection1);
+    // console.log(computerSelection1); 
     playRound(humanSelection1, computerSelection1);
-    console.log("Score after Round 1: Human " + humanScore + " - Computer " + computerScore);
+    // console.log("Score after Round 1: Human " + humanScore + " - Computer " + computerScore);
 
     let humanSelection2 = getHumanChoice();
     let computerSelection2 = getComputerChoice();
-    console.log(humanSelection2);
-    console.log(computerSelection2);
+    // console.log(humanSelection2);
+    // console.log(computerSelection2);
     playRound(humanSelection2,computerSelection2);
-    console.log("Score after Round 2: Human " + humanScore + " - Computer " + computerScore);
+    // console.log("Score after Round 2: Human " + humanScore + " - Computer " + computerScore);
+
+    let humanSelection3 = getHumanChoice();
+    let computerSelection3 = getComputerChoice();
+    // console.log(humanSelection3);
+    // console.log(computerSelection3);
+    playRound(humanSelection3,computerSelection3);
+    // console.log("Score after Round 3: Human " + humanScore + " - Computer " + computerScore);
+
+    let humanSelection4 = getHumanChoice();
+    let computerSelection4 = getComputerChoice();
+    // console.log(humanSelection4);
+    // console.log(computerSelection4);
+    playRound(humanSelection4,computerSelection4);
+    // console.log("Score after Round 4: Human " + humanScore + " - Computer " + computerScore);
+
+    let humanSelection5 = getHumanChoice();
+    let computerSelection5 = getComputerChoice();
+    // console.log(humanSelection5);
+    // console.log(computerSelection5);
+    playRound(humanSelection5,computerSelection5);
+    // console.log("Score after Round 5: Human " + humanScore + " - Computer " + computerScore);
 }
 playGame();
